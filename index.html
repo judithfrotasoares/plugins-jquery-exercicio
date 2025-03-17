@@ -13,11 +13,6 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
-<!--
-
-    CONSULTEM O README PARA DICAS DE COMO SOLUCIONAR O EXERCÍCIO!
-
--->
 
 <body>
     <header>
@@ -29,7 +24,20 @@
         <img src="./assets/slide2.png" alt="Carro da BMW">
         <img src="./assets/slide3.png" alt="Carro da Ford">
     </div>
-
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Serviços</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Serviço 1</a></li>
+                    <li><a href="#">Serviço 2</a></li>
+                    <li><a href="#">Serviço 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <h2>Insira seus dados para finalização da compra</h2>
         <form id="form">
@@ -60,26 +68,14 @@
             <button type="submit">Enviar</button>
         </form>
     </div>
+    
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="./js/jquery.mask.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/messages_pt_BR.min.js"></script>
     <script src="./js/main.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#carousel-imagens').slick({
-                autoplay: true,
-                arrows: false
-            });
-            $('#telefone').mask('(00)00000-0000');
-            $('#cpf').mask('000.000.000-00', {
-                reverse: true
-            });
-            $('#cep').mask('00000-000');
-        });
-    </script>
 </body>
 
 </html>

@@ -77,3 +77,76 @@ h2 {
     width: 100%;
     display: block;
 }
+
+/* Estilos gerais */
+.navbar {
+    background-color: #333;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+    }
+    
+    .menu > li {
+        position: relative;
+    }
+    
+    .menu > li > a {
+        display: block;
+        padding: 15px 20px;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .menu > li > a:hover {
+        background-color: #575757;
+    }
+    
+    /* Dropdown - escondido por padrão */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .dropdown-content li a {
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-content li a:hover {
+        background-color: #ddd;
+    }
+    
+    /* Exibe o dropdown ao passar o mouse (hover) em desktop */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    /* Ativa o dropdown via clique (classe .active) */
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+    
+    /* Responsividade: em telas menores, exibe o menu em coluna */
+    @media (max-width: 768px) {
+        .menu {
+        flex-direction: column;
+        }
+        /* Posicionamento estático para dropdown, se necessário */
+        .dropdown-content {
+        position: static;
+        box-shadow: none;
+        }
+}
